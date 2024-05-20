@@ -99,6 +99,10 @@ public class JpaApplication {
 		System.out.println("------------------+findByName------------------");
 		System.out.println(findByName);
 
+		List<User> result =repo.findByCityAndStatus("Kolkata","Full stack Developer");
+		System.out.println("-------------------------findByCityAndStatus--------------------");
+		System.out.println(result);
+
 
 	}
 
