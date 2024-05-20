@@ -57,12 +57,18 @@ public class JpaApplication {
 
 		//Update
 
+		User user7= new User();
+		user7.setId(52);
+		user7.setName("Laxman");
+		user7.setCity("Mathura");
+		user7.setStatus("Tester");
+		repo.save(user7);
 		Optional<User> obj = repo.findById(52);
 		User user5= null;
 		if(obj.isPresent()){
 			user5= obj.get();
 		}
-		user5.setStatus("Tester");
+		user5.setStatus("MERN stack Developer");
 
 		User update =repo.save(user5);
 		System.out.println("-------------User's status updated-------------");
@@ -82,6 +88,16 @@ public class JpaApplication {
 		repo.deleteAll();
 		System.out.println("All users deleted");
 
+//		Custom finder methods
+
+		User user6= new User();
+		user6.setName("Madhuri");
+		user6.setCity("Kolkata");
+		user6.setStatus("Full stack Developer");
+		repo.save(user6);
+		List<User> findByName =repo.findByName("Madhuri");
+		System.out.println("------------------+findByName------------------");
+		System.out.println(findByName);
 
 
 	}
