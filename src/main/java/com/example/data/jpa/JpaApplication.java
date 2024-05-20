@@ -111,6 +111,10 @@ public class JpaApplication {
 		System.out.println("--------------------------getUserByCity------------------------");
 		System.out.println(results);
 
+		List<User> result1 = repo.getAllUsers();
+		System.out.println("-------------------------getAllUsrs----------------------");
+		System.out.println(result1);
+
 
 	}
 
