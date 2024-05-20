@@ -103,6 +103,14 @@ public class JpaApplication {
 		System.out.println("-------------------------findByCityAndStatus--------------------");
 		System.out.println(result);
 
+		List<String> names = repo.getUsersName();
+		System.out.println("-------------------------------All Users name----------------------");
+		System.out.println(names);
+
+		List<User> results =repo.getUserByCity("Kolkata");
+		System.out.println("--------------------------getUserByCity------------------------");
+		System.out.println(results);
+
 
 	}
 
